@@ -97,11 +97,12 @@ li a{
 }
 
 /* Slider: Trình chiều hình ảnh */
+/* Fix lỗi ảnh Github: úp ảnh lên Github rồi lấy link ảnh đó chèn vào CSS */
 #slider{
     position: relative;
     margin-top: 46.5px;
     padding-top: 50%;
-    background:url('../img/chicago.jpg') top center / cover no-repeat;
+    background: url(https://trinhdang15.github.io/TheBand-F8/assets/img/chicago.jpg) top center / cover no-repeat; 
 }
 
 .slider-content{
@@ -126,5 +127,3 @@ li a{
     text-align: center;
     font-weight: bold;
 }
-
-/* Test lỗi Upload Github */
