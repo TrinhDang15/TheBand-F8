@@ -18,9 +18,9 @@
             <!-- Navigation: Thanh điều hướng -->
             <ul class="nav">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Tour</a></li>
-                <li><a href="#">Band</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#Tour">Tour</a></li>
+                <li><a href="#Theband">Band</a></li>
+                <li><a href="#Contact">Contact</a></li>
                 <li>
                     <a href="#">More
                         <i class="fa-solid fa-caret-down"></i>
@@ -83,10 +83,10 @@
                         <li class="tour-month">November <span class="quantity">3</span></li>
                     </ul>
 
-                    <div class="tours-infor clear">
+                    <div class="tours-info clear">
                         <div class="tour-place col-three">
                             <img class="tour-place-img" src="https://github.com/TrinhDang15/TheBand-F8/blob/main/assets/img/newyork.jpg?raw=true" alt="">
-                            <div class="tour-place-infor clear">
+                            <div class="tour-place-info clear">
                                 <h3>New York</h3>
                                 <p class="tour-place-dates">Fri 27 Nov 2016</p>
                                 <p class="tour-place-content">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
@@ -95,7 +95,7 @@
                         </div>
                         <div class="tour-place col-three">
                             <img class="tour-place-img" src="https://github.com/TrinhDang15/TheBand-F8/blob/main/assets/img/paris.jpg?raw=true" alt="">
-                            <div class="tour-place-infor clear">
+                            <div class="tour-place-info clear">
                                 <h3>Paris</h3>
                                 <p class="tour-place-dates">Sat 28 Nov 2016</p>
                                 <p class="tour-place-content">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
@@ -104,7 +104,7 @@
                         </div>
                         <div class="tour-place col-three">
                             <img class="tour-place-img" src="https://github.com/TrinhDang15/TheBand-F8/blob/main/assets/img/sanfran.jpg?raw=true" alt="">
-                            <div class="tour-place-infor">
+                            <div class="tour-place-info">
                                 <h3>San Francisco</h3>
                                 <p class="tour-place-dates">Sun 29 Nov 2016</p>
                                 <p class="tour-place-content">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
@@ -116,23 +116,51 @@
             </div>
             <!-- Contact -->
             <div id="Contact">
-                <h2 class="content-title">CONTACT</h2>
-                <p class="content-slogan">Fan? Drop a note!</p>
-                <div class="infor">
-                    <div class="infor-user"></div>
-                    <div class="infor-message"></div>
+                <div class="contact-size col clear">
+                        <h2 class="content-title content-title">CONTACT</h2>
+                        <p class="content-slogan content-slogan">Fan? Drop a note!</p>
+
+                        <div class="contact-content clear ">
+                            <div class="contact-info">
+                                <p><i class="fa-solid fa-location-dot"></i>Chicago, US</p>
+                                <p><i class="fa-solid fa-phone"></i>Phone: +00 151515</p>
+                                <p><i class="fa-solid fa-envelope"></i>Email: mail@mail.com</p>
+                            </div>
+
+                            <div class="input-info contact-form clear">
+                                <div class="info-user clear">
+                                    <div class="contact-name contact-form">
+                                        <input type="text" placeholder="Name" class="form-input-control">
+                                    </div>
+                                    <div class="contact-name contact-form">
+                                        <input type="mail" placeholder="Email" class="form-input-control">
+                                    </div>
+                                </div>
+
+                                <div class="info-message contact-form">
+                                    <input type="text" placeholder="Message" class="form-input-control">
+                                </div>
+                                <a href="#" class="contact-btn btn">SEND</a>
+                            </div>
+                        </div>
                 </div>
-                <button class="send-btn">Send</button>
             </div>
+            <div id="map">
+                <img src="./assets/img/map.jpg" alt="">
+            </div>
+            <!-- Footer -->
             <div id="Footer">
                 <ul class="footer-icon">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                    <li><i class="fa-brands fa-snapchat"></i></li>
+                    <li><i class="fa-brands fa-pinterest"></i></li>
+                    <li><i class="fa-brands fa-linkedin-in"></i></li>
                 </ul>
-                <p class="footer-content">Powered by w3.css</p>
+                <p class="footer-content">Powered by
+                <a href="https://www.w3schools.com/w3css/default.asp" style="color: black;">w3.css</a>
+                </p>
             </div>
         </div>
     </div>

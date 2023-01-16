@@ -8,6 +8,7 @@
 html{
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
+    scroll-behavior: smooth;
 }
 
 .clear::after{
@@ -31,8 +32,34 @@ html{
     margin-right: auto;
 }
 
+.col-half{
+    width: 50%;
+
+}
+
+.col-full{
+    width: 100%;
+
+}
+
 .col-three{
     width: 33.33333%;
+}
+
+.content-title{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.content-slogan{
+    font-style: italic;
+    text-align: center;
+    opacity: 0.6;
+    margin: 15px 0;
 }
 
                                 /* Commom */
@@ -150,23 +177,7 @@ li a{
     font-weight: bold;
 }
 /* Content */
-            /* Commom */
-.content-title{
-    font-size: 30px;
-    text-transform: uppercase;
-    font-weight: 400;
-    letter-spacing: 4px;
-    text-align: center;
-    margin: 10px 0;
-}
 
-.content-slogan{
-    font-style: italic;
-    text-align: center;
-    opacity: 0.6;
-    margin: 15px 0;
-}
-            /* Commom */
 /* The Band */
 .theband > p{
     font-size: 14px;
@@ -230,8 +241,8 @@ li a{
         margin-top: -1px;
     }
 
-/* Tour-Infor */
-.tours-infor{
+/* Tour-info */
+.tours-info{
     padding: 32px 8px;
     margin: 0 -16px;
 }
@@ -248,12 +259,12 @@ li a{
             opacity: 0.6;
         }
 
-        .tour-place-infor {
+        .tour-place-info {
             padding: 0.15px 16px;
             background-color: #fff;
         }
-            .tour-place-infor h3,
-            .tour-place-infor p{
+            .tour-place-info h3,
+            .tour-place-info p{
                 margin: 15px 0;
             }
             .tour-place-dates{
@@ -261,7 +272,7 @@ li a{
                 opacity: 0.6;
             }
             .tour-place-content,
-            .tour-place-infor h3{
+            .tour-place-info h3{
                 color: #000;
             }
 
@@ -270,7 +281,64 @@ li a{
                 padding: 8px 16px;
             }
 /* Contact */
+.contact-content{
+    padding: 32px 0;
+}
+    .contact-form{
+    font-size: 15px;
+    padding-right: 8px;
+    padding-left: 8px;
+    }
+
+    .info-user{
+        margin-bottom: 8px ;
+    }
+
+    #Contact .contact-info,
+    #Contact .input-info{
+        width: 50%;
+        float:left;
+    }
+    
+    .input-info .contact-name{
+        width: 50%;
+        float:left;
+    }
+
+    .form-input-control{
+        padding: 9px;
+        border: 1px solid #ccc;
+        width: 100%;
+    }
+
+.contact-btn{
+    padding: 8px 16px;
+    margin: 16px 0;
+    margin-right: 8px;
+    float:right;
+}
+
+/* Map */
+#map img{
+    filter: grayscale(50%);
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* Footer */
+#Footer{
+    padding: 64px 16px;
+    text-align: center;
+    opacity: 0.6 !important;
+    background-color: #f1f1f1!important;
+ }
+
+    .footer-icon li{
+        display: inline-block;
+        font-size: 30px;
+    }
 
 
-
-
+    #Footer p{
+        margin: 15px;
+       }
