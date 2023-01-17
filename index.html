@@ -17,11 +17,11 @@
         <div id="header">
             <!-- Navigation: Thanh điều hướng -->
             <ul class="nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#Theband">Band</a></li>
-                <li><a href="#Tour">Tour</a></li>
-                <li><a href="#Contact">Contact</a></li>
-                <li>
+                <li class="mobile-menu-name"><a href="#">Home</a></li>
+                <li class="mobile-menu-name"><a href="#Theband">Band</a></li>
+                <li class="mobile-menu-name"><a href="#Tour">Tour</a></li>
+                <li class="mobile-menu-name"><a href="#Contact">Contact</a></li>
+                <li class="mobile-menu-name">
                     <a href="#">More
                         <i class="fa-solid fa-caret-down"></i>
                     </a>
@@ -38,6 +38,11 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
             </div>
+
+            <div id="mobile-menu" class="menu-mobile-btn js-mobile-btn">
+                    <i class="fa-solid fa-bars"></i>
+            </div>
+
         </div>
         <!-- Slider: Trình chiều hình ảnh -->
         <div id="slider">
@@ -90,7 +95,7 @@
                                 <h3>New York</h3>
                                 <p class="tour-place-dates">Fri 27 Nov 2016</p>
                                 <p class="tour-place-content">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="buy-tickets-btn btn">Buy Tickets</a>
+                                <button class="buy-tickets-btn btn js-buy-tickets">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="tour-place col-three">
@@ -99,7 +104,7 @@
                                 <h3>Paris</h3>
                                 <p class="tour-place-dates">Sat 28 Nov 2016</p>
                                 <p class="tour-place-content">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="buy-tickets-btn btn">Buy Tickets</a>
+                                <button class="buy-tickets-btn btn js-buy-tickets">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="tour-place col-three">
@@ -108,10 +113,11 @@
                                 <h3>San Francisco</h3>
                                 <p class="tour-place-dates">Sun 29 Nov 2016</p>
                                 <p class="tour-place-content">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="buy-tickets-btn btn">Buy Tickets</a>
+                                <button class="buy-tickets-btn btn js-buy-tickets">Buy Tickets</button>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
 
@@ -174,9 +180,9 @@
     </div>
 
     <!-- Modal Layout -->
-    <div id="modal">
-        <div class="modal-container">
-            <div class="modal-close">
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close">
                 <i class="fa-solid fa-xmark"></i>
             </div>
 
@@ -187,17 +193,17 @@
                 </h2>
             </header>
             <div class="modal-body">
-                <label for="">
+                <label for="input-modal-name">
                     <i class="fa-solid fa-cart-shopping"></i>
                     Tickets, $15 per person
                 </label>
-                <input type="text" class="modal-input" name="" placeholder="How many?" id="">
+                <input type="text" class="modal-input" name="" placeholder="How many?" id="input-modal-name">
 
-                <label for="">
+                <label for="input-modal-email">
                     <i class="fa-solid fa-user"></i>
                     Send To
                 </label>
-                <input type="email" class="modal-input" name="" placeholder="Enter email" id="">
+                <input type="email" class="modal-input" name="" placeholder="Enter email" id="input-modal-email">
 
                 <button class="pay-btn">
                     Pay
@@ -206,11 +212,83 @@
             </div>
             <footer class="modal-footer">
                 <p>
-                    Need <a href="#">help?</a>
+                    Need <a href="#" style="color:blue">help?</a>
                 </p>
             </footer>
         </div>
     </div>
+    <!-- Open Close cho Modal -->
+    <script>
+            // Lấy ra: 3 cái nút nhấn
+            const buyBtns = document.querySelectorAll('.js-buy-tickets')
+            // Lấy ra: bảng Modal layout
+            const modal = document.querySelector('.js-modal')
+            // Lấy ra: 1 cái nút nhấn close
+            const modalClose = document.querySelector('.js-modal-close')
+
+            // Hàm Open Modal - thêm class modal-open vào thẻ div modal
+            function showBuyTickets(){
+                modal.classList.add('modal-open')
+            }
+            // Hàm Close Modal - xóa class modal-open vào thẻ div modal
+            function closeBuyTickets(){
+                modal.classList.remove('modal-open')
+            }
+
+            // Lắng nghe Click ở nút nhấn Buy Tickets
+            for (const buyBtn of buyBtns){
+                buyBtn.addEventListener('click', showBuyTickets)
+            }
+            // Lắng nghe Click ở nút nhấn Close
+                modalClose.addEventListener('click', closeBuyTickets)
+            
+
+            // Lắng nghe Click ở ngoài Modal để close Modal - vùng click là vùng div.modal
+                modal.addEventListener('click', closeBuyTickets)
+            // phát sinh lỗi - sự kiện nổi bọt: click vào cùng div.modal-container là con của div.modal cũng bị Close
+
+            // Lấy ra: bảng Modal-Container
+            const modalContainer = document.querySelector('.js-modal-container')
+
+            modalContainer.addEventListener('click',
+                function(){event.stopPropagation()}            
+            )
+    </script>
+
+    
+    <!-- Open Close cho Menu Mobile -->
+    <script>
+        const menuBtn = document.getElementById('mobile-menu')
+        const header = document.getElementById('header')
+        const headerHeight = header.clientHeight
+
+        menuBtn.onclick = function (){
+   
+           var isClose = header.clientHeight === headerHeight;
+           console.log(isClose)
+           
+            if(isClose){
+                header.style.height = 'auto' ;
+            } else {
+                header.style.height = null ;
+            }
+        }
+
+
+        function OpenCloseMenu (){
+            header.style.height = null ;
+          }
+
+
+        const menuClicks = document.querySelectorAll('.nav li a[href *="#"]')
+        for (const menuClick of menuClicks){
+                menuClick.addEventListener('click', OpenCloseMenu)
+            }
+
+
+
+
+    </script>
 
 
 </body>

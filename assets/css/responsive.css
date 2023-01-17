@@ -1,0 +1,52 @@
+/* Break Point */
+/* PC */
+@media (min-width: 1024px){
+
+}
+
+/* Table */
+@media (min-width: 1024px) and (max-width: 1023px) {
+    
+}
+
+/* PC */
+@media (max-width: 1023px){
+
+    /* Header */
+    .nav>li {
+        display:block;
+    }
+
+    #header{
+    overflow: hidden;
+    
+    }
+
+    .search-btn{
+        display: none;
+    }
+
+    .menu-mobile-btn{
+        line-height: 46.5px;
+        float:right;
+        padding:0 24px;
+    }
+
+    .menu-mobile-btn i{
+        color:#fff;
+    }
+
+    .menu-mobile-btn:hover{
+        color:#000;
+        background-color: #ccc;
+    }
+
+    .menu-mobile-btn:hover #header{
+        overflow: visible;
+    }
+
+
+
+
+
+}
