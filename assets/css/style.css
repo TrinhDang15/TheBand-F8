@@ -62,7 +62,7 @@ html{
 
 .content-slogan{
     font-style: italic;
-    text-align: center;
+    text-align: center !important;
     opacity: 0.6;
     margin: 15px 0;
 }
@@ -189,8 +189,7 @@ li a{
 /* The Band */
 .theband > p{   
     font-size: 14px;
-    text-align: justify;
-}
+}   
 
 #Theband .member-list{
     padding: 32px 0;
