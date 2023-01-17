@@ -79,7 +79,6 @@ html{
     background-color: #000;
     width: 100%;
     z-index: 1;
-    overflow: hidden;
 }
 
 .nav,
@@ -136,6 +135,10 @@ li a{
     color: #000;
 }
 
+.menu-mobile-btn{
+    display:none;
+}
+
 /* Search Button */
 .search-btn{
     line-height: 46.5px;
@@ -189,6 +192,7 @@ li a{
 /* The Band */
 .theband > p{   
     font-size: 14px;
+    text-align: justify;
 }   
 
 #Theband .member-list{

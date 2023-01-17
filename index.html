@@ -60,15 +60,15 @@
                     <p class="content-slogan">We love music</p>
                     <p>We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     <div class="member-list clear">
-                        <div class="theband-member col-three">
+                        <div class="member-mobile theband-member col-three">
                             <p>Name</p>
                             <img src="https://github.com/TrinhDang15/TheBand-F8/blob/main/assets/img/bandmember.jpg?raw=true" alt="">
                         </div>
-                        <div class="theband-member col-three">
+                        <div class="member-mobile theband-member col-three">
                             <p>Name</p>
                             <img src="https://github.com/TrinhDang15/TheBand-F8/blob/main/assets/img/bandmember.jpg?raw=true" alt="">
                         </div>
-                        <div class="theband-member col-three">
+                        <div class="member-mobile theband-member col-three">
                             <p>Name</p>
                             <img src="https://github.com/TrinhDang15/TheBand-F8/blob/main/assets/img/bandmember.jpg?raw=true" alt="">
                         </div>
@@ -89,7 +89,7 @@
                     </ul>
 
                     <div class="tours-info clear">
-                        <div class="tour-place col-three">
+                        <div class="tour-mobile tour-place col-three">
                             <img class="tour-place-img" src="https://github.com/TrinhDang15/TheBand-F8/blob/main/assets/img/newyork.jpg?raw=true" alt="">
                             <div class="tour-place-info clear">
                                 <h3>New York</h3>
@@ -98,7 +98,7 @@
                                 <button class="buy-tickets-btn btn js-buy-tickets">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="tour-place col-three">
+                        <div class="tour-mobile tour-place col-three">
                             <img class="tour-place-img" src="https://github.com/TrinhDang15/TheBand-F8/blob/main/assets/img/paris.jpg?raw=true" alt="">
                             <div class="tour-place-info clear">
                                 <h3>Paris</h3>
@@ -107,7 +107,7 @@
                                 <button class="buy-tickets-btn btn js-buy-tickets">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="tour-place col-three">
+                        <div class="tour-mobile tour-place col-three">
                             <img class="tour-place-img" src="https://github.com/TrinhDang15/TheBand-F8/blob/main/assets/img/sanfran.jpg?raw=true" alt="">
                             <div class="tour-place-info">
                                 <h3>San Francisco</h3>
@@ -128,19 +128,19 @@
                     <p class="content-slogan">Fan? Drop a note!</p>
 
                     <div class="content clear">
-                        <div class="contact-content col-half">
+                        <div class="contact-mobile contact-content col-half">
                             <p><i class="fa-solid fa-location-dot"></i>Chicago, US</p>
                             <p><i class="fa-solid fa-phone"></i>Phone: +00 151515</p>
                             <p><i class="fa-solid fa-envelope"></i>Email: mail@mail.com</p>
                         </div>
 
-                        <div class="contact-input col-half clear">
+                        <div class="contact-mobile contact-input col-half clear">
                             <form action="">
                                 <div class="col clear">
-                                    <div class="col-half">
+                                    <div class="col-half contact-mobile content-mobile">
                                         <input type="text" required name="" placeholder="Name" id="" class="form-control">
                                     </div>
-                                    <div class="col-half">
+                                    <div class="col-half contact-mobile">
                                         <input type="email" required name="" placeholder="Email" id="" class="form-control">   
                                     </div>
                                 </div>
@@ -278,8 +278,6 @@
         function OpenCloseMenu (){
             header.style.height = null ;
           }
-
-
         const menuClicks = document.querySelectorAll('.nav li a[href *="#"]')
         for (const menuClick of menuClicks){
                 menuClick.addEventListener('click', OpenCloseMenu)

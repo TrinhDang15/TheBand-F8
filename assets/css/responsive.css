@@ -5,12 +5,12 @@
 }
 
 /* Table */
-@media (min-width: 1024px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
     
 }
 
-/* PC */
-@media (max-width: 1023px){
+/* Mobile */
+@media (max-width: 767px){
 
     /* Header */
     .nav>li {
@@ -18,8 +18,7 @@
     }
 
     #header{
-
-    
+        overflow: hidden;
     }
 
     .search-btn{
@@ -27,6 +26,7 @@
     }
 
     .menu-mobile-btn{
+        display:block;
         line-height: 46.5px;
         float:right;
         padding:0 24px;
@@ -52,6 +52,25 @@
         display:none;
     }
 
+/* The Band */
+    #Theband .member-mobile{
+        width: 100%;
+        float: none;
+    }
+/* Tour */
+    #Tour .tour-mobile{
+        float: none;
+        margin-bottom: 16px;
+        width: 100%;
+    }
+/* Contact */
+    .contact-mobile{
+        float:none;
+        width: 100%;
+    }
 
-
+    .content-mobile{
+        margin-top: 16px;
+        margin-bottom: 8px;
+    }
 }
